@@ -10,6 +10,9 @@ module.exports = {
       },
     },
   },
-  variants: { margin: ['responsive', 'first'] },
+  variants: {
+    margin: ['responsive', 'first'],
+    opacity: ['responsive', 'hover', 'focus', 'disabled'],
+  },
   plugins: [tailwindUI],
 };
