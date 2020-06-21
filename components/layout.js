@@ -1,16 +1,24 @@
-import Header from "./header";
-import Footer from "./footer";
+import PropTypes from 'prop-types';
 
-function Layout(props) {
+import { Header } from './header';
+import { Sidebar } from './sidebar';
+import { Footer } from './footer';
+
+export function Layout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-white border-t-4 border-teal-500">
       <Header />
-      <main className="flex-1 w-full max-w-4xl p-4 mx-auto md:px-8 md:py-16">
-        {props.children}
+      <main className="flex-1 w-full max-w-3xl px-6 mx-auto lg:max-w-7xl">
+        <article className="grid py-12 border-gray-100 lg:grid-cols-3 lg:gap-16">
+          <Sidebar />
+          <div className="col-span-2 space-y-12">{children}</div>
+        </article>
       </main>
       <Footer />
     </div>
   );
 }
 
-export default Layout;
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};

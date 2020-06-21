@@ -1,7 +1,15 @@
-import "../css/index.css";
+import PropTypes from 'prop-types';
+import 'typeface-inter';
 
-function MyApp({ Component, pageProps }) {
+import '../css/index.css';
+
+function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
 
-export default MyApp;
+App.propTypes = {
+  Component: PropTypes.func.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};
+
+export default App;

@@ -1,21 +1,20 @@
-import Layout from "../components/layout";
+import Link from 'next/link';
 
-function IndexPage() {
+import { Layout, SEO } from '../components';
+
+export default function IndexPage() {
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center">
-        <img
-          src="team-of-critters.svg"
-          className="w-full max-w-xl"
-          alt="Four one-eyed aliens playing"
-        />
-
-        <h2 className="p-3 my-8 text-lg font-bold bg-yellow-400 md:text-2xl">
-          Hi! Welcome to your first Next.js site.
-        </h2>
-      </div>
+      <SEO title="Home" />
+      <h1 className="text-2xl font-semibold text-gray-900">Home</h1>
+      <h2 className="text-lg font-medium leading-6 text-gray-900">
+        Contact us
+      </h2>
+      <Link href="/contact/">
+        <a className="mt-1 text-sm font-medium leading-5 text-teal-600 transition duration-150 ease-in-out hover:text-teal-500 focus:outline-none focus:underline">
+          Click here to go to our contact form.
+        </a>
+      </Link>
     </Layout>
   );
 }
-
-export default IndexPage;
