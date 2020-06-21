@@ -22,8 +22,16 @@ export function Contact() {
     phone_number: '',
     subject: '',
     message: '',
-    agree_to_privacy_policy: false,
   });
+
+  const disabled =
+    state.first_name === '' ||
+    state.last_name === '' ||
+    state.email === '' ||
+    state.phone_number === '' ||
+    state.subject === '' ||
+    state.message === '' ||
+    isChecked === false;
 
   return (
     <article className="relative overflow-hidden bg-white">
@@ -95,13 +103,19 @@ export function Contact() {
                 </div>
               </div>
             </div>
-            <div className="flex sm:col-span-2">
+            <div className="sm:col-span-2">
               <button
                 type="submit"
-                className="bg-gray-800 px-4 w-full py-2.5 text-base leading-6 font-semibold transition duration-150 ease-in-out text-white rounded-none focus:shadow-outline focus:outline-none focus:bg-gray-700 hover:bg-gray-700 active:bg-gray-900"
+                disabled={disabled}
+                className="bg-gray-800 px-4 w-full py-2.5 text-base leading-6 font-semibold transition duration-150 ease-in-out text-white rounded-none focus:shadow-outline focus:outline-none focus:bg-gray-700 hover:bg-gray-700 active:bg-gray-900 disabled:opacity-50"
               >
                 Submit
               </button>
+              {disabled && (
+                <p className="mt-4 text-center text-gray-600">
+                  Please fill in all required fields to submit contact form.
+                </p>
+              )}
             </div>
           </Form>
         </div>
