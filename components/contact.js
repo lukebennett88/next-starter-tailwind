@@ -107,7 +107,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={disabled}
-                className="bg-gray-800 px-4 w-full py-2.5 text-base leading-6 font-semibold transition duration-150 ease-in-out text-white rounded-none focus:shadow-outline focus:outline-none focus:bg-gray-700 hover:bg-gray-700 active:bg-gray-900 disabled:opacity-50"
+                className="bg-gray-800 px-4 w-full py-2.5 text-base leading-6 font-semibold transition duration-150 ease-in-out text-white rounded-none focus:shadow-outline focus:outline-none focus:bg-gray-700 hover:bg-gray-700 active:bg-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Submit
               </button>

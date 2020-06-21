@@ -11,6 +11,7 @@ module.exports = {
     },
   },
   variants: {
+    cursor: ['responsive', 'disabled'],
     margin: ['responsive', 'first'],
     opacity: ['responsive', 'hover', 'focus', 'disabled'],
   },
