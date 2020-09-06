@@ -1,8 +1,15 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const tailwindUI = require('@tailwindcss/ui');
+const typography = require('@tailwindcss/typography');
 
+// See https://tailwindcss.com/docs/configuration for details
 module.exports = {
-  purge: ['./components/**/*.js', './pages/**/*.js'],
+  purge: ['./src/**/*.js'],
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
+  experimental: 'all',
   theme: {
     extend: {
       fontFamily: {
@@ -10,10 +17,15 @@ module.exports = {
       },
     },
   },
+  // Default values here: https://tailwindcss.com/docs/pseudo-class-variants#default-variants-reference
   variants: {
-    cursor: ['responsive', 'disabled'],
-    margin: ['responsive', 'first'],
-    opacity: ['responsive', 'hover', 'focus', 'disabled'],
+    borderColor: ['responsive', 'hover', 'focus', 'group-focus'],
+    boxShadow: ['responsive', 'hover', 'focus', 'group-focus'],
   },
-  plugins: [tailwindUI],
+  plugins: [
+    // See https://tailwindui.com/documentation for details
+    tailwindUI,
+    // See https://github.com/tailwindlabs/tailwindcss-typography for details
+    typography,
+  ],
 };

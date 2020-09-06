@@ -1,24 +1,26 @@
 {
   "name": "next-starter-tailwindcss",
   "private": true,
-  "description": "Next.js starter styled with Tailwind CSS",
-  "version": "1.1.0",
-  "author": "Luke Bennett",
+  "description": "A simple starter to get up and developing quickly with Next.js and Tailwind",
+  "version": "0.1.0",
+  "author": "Luke Bennett <hello@lukebennett.com.au>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
-    "@reach/dialog": "^0.10.4",
-    "@tailwindcss/ui": "^0.3.0",
-    "cssnano": "^4.1.10",
-    "next": "9.4.4",
+    "@tailwindcss/typography": "^0.2.0",
+    "@tailwindcss/ui": "^0.6.0",
+    "autoprefixer": "^9.8.6",
+    "next": "^9.5.3",
     "prop-types": "^15.7.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-spring": "^8.0.27",
-    "tailwindcss": "1.4.6",
-    "typeface-inter": "^3.12.0",
-    "typeface-montserrat": "^0.0.75"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "tailwindcss": "^1.8.3"
   },
   "devDependencies": {
-    "autoprefixer": "9.8.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -31,22 +33,5 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
     "prettier": "^2.0.5"
-  },
-  "license": "MIT",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "export": "yarn run build && next export",
-    "start": "next start",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lukebennett88/next-starter-tailwind.git"
-  },
-  "bugs": {
-    "url": "https://github.com/lukebennett88/next-starter-tailwind/issues"
-  },
-  "homepage": "https://github.com/lukebennett88/next-starter-tailwind#readme"
+  }
 }

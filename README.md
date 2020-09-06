@@ -1,3 +1,3 @@
-# Next.js Starter Tailwind
+# Next Starter TailwindCSS
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d7982f40-34ed-45d3-bb3b-d4a923124975/deploy-status)](https://app.netlify.com/sites/next-starter-tailwindcss/deploys)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lukebennett88/next-starter-tailwindcss)
